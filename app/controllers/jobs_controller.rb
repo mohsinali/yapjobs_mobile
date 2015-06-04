@@ -4,8 +4,7 @@ class JobsController < ApplicationController
     
 	end
 
+  def show
 
-  def jobs
-    
   end
 end

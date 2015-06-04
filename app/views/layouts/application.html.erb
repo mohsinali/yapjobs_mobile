@@ -2,18 +2,15 @@
 <html>
 <head>
   <title>YapjobsMobile</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
-<body class="yp-home-page-bg">
-<div class="yp-home-download-app-store"><a href="https://itunes.apple.com/us/app/yapjobs/id948582939?mt=8">Download From <span>App Store</span></a></div>
-<div class="yp-home-yapjobs-logo"></div>
-<div class="yp-home-tagline">YapJobs make finding and applying
-for jobs simple, easy and fun.</div>
-<a href="list.html"><div class="yp-home-view-job">View Jobs</div></a>
+<body>
+	<%= yield %>
 
-<div class="yp-home-fullsite-link"><a href="http://www.yapjobs.com/">Switch to full site</a></div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
