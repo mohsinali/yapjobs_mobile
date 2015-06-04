@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media (min-width: 320px) and (max-width: 2000px) {
+.yp-job-section { padding:10px;}
+
+.yp-job-title {color:#81c200; font-size:30px;}
+.yp-job-details {}
+.yp-job-hire-manager-label { color:#185271; margin-top:8px;}
+.yp-job-hire-manager-title { color:#185271; font-size:24px; margin-top:-8px; margin-left:-2px;}
+
+.yp-job-apply-now-btn {border-radius:4px; width:300px; margin:0 auto; color:#FFF; padding:8px 18px; background-color:#81c200; font-size:16px; text-align:center;border:solid 2px #81c200}
+.yp-job-apply-now-btn a { color:#FFF;}
+.yp-job-apply-now-btn a:hover { color:#3b3a3a;}
+.yp-job-apply-now-btn:hover {color:#3b3a3a ; background-color:#f5f5f5; border:solid 2px #81c200}
+.yp-job-apply-now-btn:hover a {color:#3b3a3a ;}
+
+	}
