@@ -34,4 +34,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.api_server_url = ENV["DOMAIN_NAME"] + "/api/v2/"
+  config.api_authorization = ENV["API_AUTHORIZATION"]
+
 end

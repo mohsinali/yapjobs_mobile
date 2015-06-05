@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 group :development do
   gem 'quiet_assets'
 end
+
+gem 'rest-client'
   
 
 # Use ActiveModel has_secure_password
