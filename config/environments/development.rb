@@ -38,4 +38,6 @@ Rails.application.configure do
   config.api_server_url = ENV["DOMAIN_NAME"] + "/api/v2/"
   config.api_authorization = ENV["API_AUTHORIZATION"]
 
+  # config.frameworks -= [ :active_record, :active_resource, :action_mailer]
+
 end
