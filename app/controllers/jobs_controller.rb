@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   require 'json'
   
   def index
+
     jobs_get = RestClient.get Rails.application.config.api_server_url + "jobs",
        {:Authorization => Rails.application.config.api_authorization,  "Content-Type" => "application/json"}
 
