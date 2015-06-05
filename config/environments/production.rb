@@ -76,7 +76,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.api_server_url = ENV["DOMAIN_NAME"] + "/api/v2/"
+  config.api_server_url = ENV["API_PATH"]
   config.api_authorization = ENV["API_AUTHORIZATION"]
   
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer]

@@ -35,7 +35,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.api_server_url = ENV["DOMAIN_NAME"] + "/api/v2/"
+  config.api_server_url = ENV["API_PATH"]
   config.api_authorization = ENV["API_AUTHORIZATION"]
 
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer]
