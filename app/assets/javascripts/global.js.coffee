@@ -33,8 +33,8 @@ $ ->
       getAddress(position.coords.latitude, position.coords.longitude)
 
       ## Call this method to calculate distance from current_location to jobseekers location.
-      if gon.business_location != undefined
-        getDistance(current_position, gon.business_location)
+      # if gon.business_location != undefined
+      #   getDistance(current_position, gon.business_location)
 
 
   ################################################

@@ -15,16 +15,20 @@
   <div class="yp-home-tagline">
     YapJobs make finding and applying for jobs simple, easy and fun.
   </div>
-  <a href="<%= jobs_path %>">
+  <%= form_tag(jobs_path, method: "get") do %>
+    <%= hidden_field_tag "current_position" %>
+    <%= submit_tag "View Jobs", class: 'yp-home-view-job' %>
+  <%- end %>
+<!--   <a href="<%= jobs_path %>">
     <div class="yp-home-view-job">View Jobs</div>
-  </a>
+  </a> -->
 
   <div class="yp-home-fullsite-link">
     <a href="http://www.yapjobs.com/">Switch to full site</a>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> --> 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=false&amp;libraries=places" type="text/javascript"></script> 
   </body>
 </html>

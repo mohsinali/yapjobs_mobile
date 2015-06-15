@@ -1,0 +1,257 @@
+<div class="yp-header">
+<div class="yp-header-left-btn">
+    	<a href="<%= jobs_path %>"><div class="yp-header-left-btn-icon"><%= image_tag "yp-list-header-back-icon.png" %></div></a>
+  </div>
+    <div class="yp-header-logo">
+    	<a href="<%= root_path %>"><div class="yp-header-logo-icon"><%= image_tag "yp-home-yapjobs-logo.png" %></div></a>
+    </div>
+    <div class="yp-header-next-btn">
+      
+    </div>
+    <div class="clearBoth"></div>
+</div>
+<%= form_tag('/search/list', method: "get") do %>
+<div class="yp-search-setting-section">
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Location</div><div class="yp-search-setting-label-right "></div>
+<div class="clearBoth"></div>
+</div>
+<div class="yp-search-setting-input">
+<%= text_field_tag 'location', "#{params[:location]}", id: "autocomplete_address" %>
+<%= hidden_field_tag "current_position" %>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right "><%= params[:distance] %> Miles</div>
+<div class="clearBoth"></div>
+</div>
+<%= range_field_tag(:distance, value = params[:distance].present? ? params[:distance] : 50, options = {:min => 0, :max => 100, :step => 20, :class => "yp-search-setting-slider"}) %>
+
+<!-- <div id="slider1"  class="yp-search-setting-slider" ></div> -->
+
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Position</div>
+<div class="clearBoth"></div>
+</div>
+
+
+<!-- Single button -->
+<div class="yp-set-dropdown-btn-group">
+
+<!--   <%- @job_roles.each do |job_role| %>
+          <a id="#{job_role[id]}" class="job_role_search #{job_role[slug]}" name="#{job_role[slug]}" href="#" #{job_role[name]}></a>
+  <%- end %> -->
+
+  <button type="button" class="yp-set-dropdown-btn" >
+    <span class="yp-set-dropdown-btn-icon"><%= image_tag "yp-drop-down-icon-1.png" %></span>Receptionist 
+  </button>
+  
+</div>
+
+
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Hourly Rate</div><div class="yp-search-setting-label-right ">₤ 6.5</div>
+<div class="clearBoth"></div>
+</div>
+<%= range_field_tag(:hourly_rate, value = params[:hourly_rate], options = {:min => 5.13, :max => 40, :step => 0.01, :class => "yp-search-setting-slider"}) %>
+<!-- <div id="slider2"  class="yp-search-setting-slider" ></div> -->
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Shift</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:25%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Day
+  </label>
+  <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Evening
+  </label>
+    <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Night
+  </label>
+  <div class="clearBoth"></div>
+</div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Job Type</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:33%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:33%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Part Time
+  </label>
+  <label class="btn btn-primary" style="width:34%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Full Time
+  </label>
+  <div class="clearBoth"></div>
+
+</div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Contract Type</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block; margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:33%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:33%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Permanent
+  </label>
+  <label class="btn btn-primary" style="width:34%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Temporary
+  </label>
+  <div class="clearBoth"></div>
+
+</div>
+<br>
+<%= submit_tag "Search Jobs", class: 'yp-search-setting-btn' %>
+<!-- <a href="<%= list_search_index_path %>"><div class="yp-search-setting-btn">Search Jobs</div></a> -->
+</div>
+<br><br>
+
+  <script>
+    $(function() {
+      $( "#slider1" ).slider();
+      $( "#slider2" ).slider();
+     //  $( "#slider1" ).slider({slide: showValue, change: showValue});
+  	  // $( "#slider2" ).slider({slide: showValue, change: showValue});
+      // $( "#slider1" ).bxSlider();
+      // $( "#slider2" ).bxSlider();
+    });
+  </script>
+
+<% end %>
+
+
+<%- unless @jobs["jobs"].nil? %>
+  <%- @jobs["jobs"].each do |job| %>
+      <a href="<%= job_path(job["id"]) %>">
+      <div class="yp-list">
+          <div class="yp-list-left">
+              <div class="yp-list-left-icon">        
+              <%= image_tag "http://www.yapjobs.com/" + job["role"]["image"], width: "26", height: "27" %>
+
+              </div>
+        </div>
+          <div class="yp-list-content">
+              <div class="yp-list-content-job-title"><%= job["role"]["name"] %></div>
+                  <div class="yp-list-content-address"><%= job["business"]["address"] %></div>
+                      <div class="yp-list-content-footer">
+                      <div class="yp-list-content-footer-distance"><%= job["distance"] %> miles away</div>
+                      <div class="yp-list-content-footer-salary"><%= job["hourly_rate"] %> ph</div>
+                      <div class="clearBoth"></div>
+                  </div>
+          </div>
+          <div class="clearBoth"></div>
+
+      </div>
+      </a>
+  <% end %>
+<% end %>
+
+
+<!--
+  <div class="yp-search-setting-section">
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Location</div><div class="yp-search-setting-label-right "></div>
+<div class="clearBoth"></div>
+</div>
+<div class="yp-search-setting-input"><input name="" type="text" value="Enter Location"></div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right ">20 Miles</div>
+<div class="clearBoth"></div>
+</div>
+<div id="slider1"  class="yp-search-setting-slider" ></div>
+
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Position</div>
+<div class="clearBoth"></div>
+</div>
+
+<!-- Single button -->
+<!-- <div class="yp-set-dropdown-btn-group">
+  <button type="button" class="yp-set-dropdown-btn" >
+    <span class="yp-set-dropdown-btn-icon"><%= image_tag "yp-drop-down-icon-1.png" %></span>Receptionist 
+  </button>
+  
+</div>
+
+
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Hourly Rate</div><div class="yp-search-setting-label-right ">₤ 6.5</div>
+<div class="clearBoth"></div>
+</div>
+<div id="slider2"  class="yp-search-setting-slider" ></div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Shift</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:25%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Day
+  </label>
+  <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Evening
+  </label>
+    <label class="btn btn-primary" style="width:25%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Night
+  </label>
+  <div class="clearBoth"></div>
+</div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Job Type</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:33%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:33%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Part Time
+  </label>
+  <label class="btn btn-primary" style="width:34%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Full Time
+  </label>
+  <div class="clearBoth"></div>
+
+</div>
+<div class="yp-search-setting-label">
+<div class="yp-search-setting-label-left" >Contract Type</div><div class="yp-search-setting-label-right"></div>
+<div class="clearBoth"></div>
+</div>
+<div class="btn-group" data-toggle="buttons" style="display:block; margin-bottom:20px;">
+  <label class="btn btn-primary active" style="width:33%">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Any
+  </label>
+  <label class="btn btn-primary" style="width:33%">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Permanent
+  </label>
+  <label class="btn btn-primary" style="width:34%">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Temporary
+  </label>
+  <div class="clearBoth"></div>
+
+</div>
+<br>
+<a href="<%= list_search_index_path %>"><div class="yp-search-setting-btn">Search Jobs</div></a>
+</div>
+<br><br>
+
+  <script>
+    $(function() {
+      $( "#slider1" ).slider();
+      $( "#slider2" ).slider();
+     //  $( "#slider1" ).slider({slide: showValue, change: showValue});
+      // $( "#slider2" ).slider({slide: showValue, change: showValue});
+      // $( "#slider1" ).bxSlider();
+      // $( "#slider2" ).bxSlider();
+    });
+  </script>
+
+-->

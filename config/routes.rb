@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   resources :jobs
 
+  resources :search do
+    collection do
+     get :list
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
