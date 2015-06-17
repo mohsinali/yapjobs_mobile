@@ -1,4 +1,378 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search-main{
+	/*width:1100px;*/
+	margin:auto;
+    margin-top: 20px;
+}
+
+.bluebg{
+	background:none repeat scroll 0 0 #045171;
+}
+
+.roundcorner{
+	border-radius: 7px;
+}
+.search-main .srchleft{
+	/*margin-right: 20px;*/
+    /*min-height: 450px;*/
+	color: white;
+	font-size:14px;
+	padding: 0px;
+    margin-bottom:15px;
+    margin-top:10px;
+}
+
+.search-main label{
+    font-size:12px;
+}
+
+.srchsection{ 
+    /*border-bottom: 1px solid #ccc; */
+    padding: 10px; 
+}
+.srchleft input, .srchleft select { 
+    /*background-color: #ffffff;*/
+    /*border: 2px solid #ddd;*/
+    width: 90%; margin: auto;
+    color: #858585;
+    font-family: inherit;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.2;
+    padding: 5px 4px;
+    margin-left:13px;
+    border-radius: 5px;
+}
+
+.srchleft-radio-label { margin-left: 15px !important}
+.srchleft-radio-input  {
+    width: 20px !important;
+    height: 10px !important;
+}
+.srchleft-slider { 
+ background: none;
+}
+
+#search_btn{
+    font-size: 20px; 
+    font-weight: bold; 
+    text-shadow: 0 -1px 0 #888;
+    margin-left: 10px;
+    background-color:#a9c93e!important;
+    color:#fff!important;
+    border: solid 1px #a9c93e; 
+}
+#search_btn:hover{
+    font-size: 20px; 
+    font-weight: bold; 
+    text-shadow: 0 -1px 0 #888;
+    margin-left: 10px;
+    background-color:#fff!important;
+    color:#a9c93e!important;
+    border: solid 1px #a9c93e; 
+}
+
+.indvjobbox{
+    border-top:1px solid #ccc;
+    }
+
+.srchright h3{ 
+    color: #666;
+}
+.indvjob{
+    color: #333;
+}
+.indvjob h3{
+    color: #81c100;
+}
+.whitebg{ 
+    background-color: white;
+}
+
+.paraicons{
+    font-size: 25px; color: gray
+}
+.paraicons:hover{
+    color: 81c100;
+}
+
+.fa-hover .job-search-cat{
+    /*padding-left: 5px;*/
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    color: #069;
+    display: block;
+    height: 35px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 150px;
+    margin-left:-5px;
+}
+
+/*.fa-hover .job-search-cat:hover{
+    background-color: #81c100;
+    color: white;
+    text-decoration: none;
+}
+
+.fa-hover .job-search-cat .fa {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: right;
+    width: 32px;
+}*/
+
+/*.fa-hover a {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    color: #069;
+    display: block;
+    height: 35px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 150px;
+}
+
+.fa-hover a:hover{
+    background-color: #81c100;
+    color: white;
+    text-decoration: none;
+}
+
+.fa-hover a .fa {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: right;
+    width: 32px;
+}*/
+
+.jobname{
+    font-size: 25px;
+    color: #81c100;
+}
+
+.businessname{
+    font-weight: bold;
+}
+
+.indvjob{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow:1px 1px 1px #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.jobparameters{
+    /*background-color: #f7f7f7;*/
+}
+
+.srchsubmit{
+    /*margin-left: 47px;*/
+}
+.margin-4{
+    margin-top:-4px;
+}
+
+.label-div{
+    float:left;
+    padding-top:7px;
+    margin-left:72px;
+}
+
+.check-div{
+    float:left;
+    margin-left: -25px;
+}
+.advance-search{
+    color:#fff;
+    text-decoration: underline;
+}
+.advance-search:link,.advance-search:visited{
+    color:#fff;
+    text-decoration: underline;
+}
+.adv-search{
+    margin: 0 auto;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.adv-search a:link, .adv-search a:visited{
+    color: #fff; text-decoration: none;
+}
+.position-div{
+    float: left;
+    padding-top: 7px;
+}
+
+.position-div select option:hover {
+    background: #fff;
+}
+
+.push-right{
+    right: 0;
+    float: right;
+    margin-right: -50px;
+}
+
+.advanced-enable{
+    clear:both;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.advanced-enable a:link, .advanced-enable a:visited{
+    color: #fff; text-decoration: none;
+}
+
+.search-small-btn {
+
+    padding: 6px 6px !important;
+}
+
+.job-search-cat{
+    margin: 2px 2px;
+
+}
+
+.marginpad-right{
+    margin-right:12px !important;
+}
+
+.img-initial-search {
+     border: 3px solid #eee;
+    border-radius: 180px;
+    height: 80px;
+    width: 80px;
+    margin:0 auto;
+
+}
+
+.img-initial-search-text{
+    font-size: 32px;
+    margin: 16px auto;
+    text-align: center;
+    width: 75px;
+    text-transform: uppercase;
+
+}
+
+.img-pic-search {
+
+    border: 3px solid #eee !important;
+    border-radius: 180px !important;
+    height: 80px !important;
+    width: 80px !important;
+}
+
+/*.search-height{
+    min-height: 885px;
+    margin-bottom:20px;
+}*/
+
+.top-header-space{
+    margin-top: 0px;
+}
+
+.pad-search-space{
+    padding: 0;
+}
+.rate-aligned{
+    /*padding-right: 0 !important;*/
+    text-align: right;
+    margin-right: 0 !important;
+}
+
+.centered-aligned-text{
+    text-align: center;
+}
+
+/*.aligned-ct{
+    padding-left: 0;
+}*/
+
+.distance-miles{
+    margin-right: 0;
+    padding-right: 0;
+    text-align: right;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.distance-within-text{
+ padding-right: 0;
+ margin-right:0;
+ text-align: left;
+}
+
+#hourly_rate, #distance{
+    padding:5px 0px;
+}
+
+.srchright .indvjob:hover{
+    border:1px solid #81c100;
+    box-shadow:1px 1px 1px #81c100;/*#045171*/
+}
+
+.search-main .indvjob:hover{
+    border:1px solid #81c100;
+    box-shadow:1px 1px 1px #81c100;/*#045171*/
+}
+.job-role-search-position{
+    /*position: absolute;*/
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #fff;
+    color: #858585;
+    height: 30px;
+    width: 198px;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 2px 7px 0 7px;
+}
+
+.job-role-position-search-dropdown-menu {
+    /*margin-top:0px;
+    in-width:312px;
+    margin-left: 9px !important;*/
+    margin-top: 0px;
+    min-width: 201px;
+    margin-left: 9px !important;
+    overflow: auto;
+    overflow-x: scroll;
+    font-size: 11px;
+}
+
+
+.job_role_search{
+  padding: 9px 39px !important;
+  width: 187px !important;
+  margin-left: 5px;
+}
+.job_role_search:hover{
+  padding: 9px 39px !important;
+  width: 187px !important;
+}
+
+.job-role-search-lable-arrow {
+    float: right;
+    margin-top:12px;
+    position: absolute;
+    right: 8px;
+}
+
+.no-icon-list { padding-left: 10px!important;}
+.no-icon-list:hover { padding-left: 10px!important;}
+.no-icon-list-selected {padding-left: 4px!important;}
+.no-icon-list-selected:hover {padding-left: 4px!important;}
