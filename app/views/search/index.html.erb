@@ -101,16 +101,16 @@
     <input type="radio" name="options" id="option3" autocomplete="off"> Night
   </label> -->
  
-  <label class="btn btn-primary <%= "active" if params[:shift_id] == "-1" %>" style="width:25%" >
+  <label class="btn btn-primary <%= 'active' if params[:shift_id] == "-1" %>" style="width:25%" >
     <%= radio_button_tag "shift_id", "-1", (params[:shift_id] == "-1") ? true : false %> Any
   </label>
-  <label class="btn btn-primary" style="width:25%">
+  <label class="btn btn-primary <%= 'active' if params[:shift_id] == "1" %>" style="width:25%">
     <%= radio_button_tag "shift_id", "1", (params[:shift_id] == "1") ? true : false %> Day
   </label>
-  <label class="btn btn-primary" style="width:25%">
+  <label class="btn btn-primary <%= 'active' if params[:shift_id] == "2" %>" style="width:25%">
     <%= radio_button_tag "shift_id", "2", (params[:shift_id] == "2") ? true : false %> Evening
   </label>
-  <label class="btn btn-primary" style="width:25%">
+  <label class="btn btn-primary <%= 'active' if params[:shift_id] == "3" %>" style="width:25%">
     <%= radio_button_tag "shift_id", "3", (params[:shift_id] == "3") ? true : false %> Night
   </label>
 
@@ -157,13 +157,13 @@
 <div class="clearBoth"></div>
 </div>
 <div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
-  <label class="btn btn-primary <%= "active"if params[:job_type] == "-1" %>" style="width:33%">
+  <label class="btn btn-primary <%= 'active' if params[:job_type] == "-1" %>" style="width:33%">
     <%= radio_button_tag "job_type", "-1", (params[:job_type] == "-1") ? true : false, id: " AnyTime " %> Any
   </label>
-  <label class="btn btn-primary" style="width:33%">
+  <label class="btn btn-primary <%= 'active' if params[:job_type] == "false" %>" style="width:33%">
     <%= radio_button_tag "job_type", "false", (params[:job_type] == "false") ? true : false, id: " PartTime " %> Part Time
   </label>
-  <label class="btn btn-primary" style="width:34%">
+  <label class="btn btn-primary <%= 'active' if params[:job_type] == "true" %>" style="width:34%">
     <%= radio_button_tag "job_type", "true", (params[:job_type] == "true") ? true : false, id: " FullTime " %> Full Time
   </label>
   <div class="clearBoth"></div>
@@ -194,13 +194,13 @@
   <label class="btn btn-primary" style="width:34%">
     <input type="radio" name="options" id="option3" autocomplete="off"> Temporary
   </label> -->
-  <label class="btn btn-primary <%= "active" if params[:contract_type] == "-1" %>" style="width:33%">
+  <label class="btn btn-primary <%= 'active' if params[:contract_type] == "-1" %>" style="width:33%">
     <%= radio_button_tag "contract_type", "-1", (params[:contract_type] == "-1") ? true : false, id: "AnyContract" %> Any
   </label>
-  <label class="btn btn-primary" style="width:33%">
+  <label class="btn btn-primary <%= 'active' if params[:contract_type] == "true" %>" style="width:33%">
     <%= radio_button_tag "contract_type", "true", (params[:contract_type] == "true") ? true : false, id: "Permenant" %> Permanent
   </label>
-  <label class="btn btn-primary" style="width:34%">
+  <label class="btn btn-primary <%= 'active' if params[:contract_type] == "false" %>" style="width:34%">
     <%= radio_button_tag "contract_type", "false", (params[:contract_type] == "false") ? true : false, id: "Temporary" %> Temporary
   </label>
 <!--         label#default_contract_type.btn.btn-primary class=( 'active' if params[:contract_type] == "-1")

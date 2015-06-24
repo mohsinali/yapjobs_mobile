@@ -391,3 +391,9 @@
 
 }
 .dropdown-menu > li > a:hover{background: transparent;} 
+
+.setting-button{
+    padding: 0px;
+  margin: 8px;
+}
+

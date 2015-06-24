@@ -6,7 +6,17 @@
         <a href="<%=root_path %>"><div class="yp-header-logo-icon"><%= image_tag "yp-home-yapjobs-logo.png" %></div></a>
     </div>
     <div class="yp-header-next-btn">
-     <a href="<%= search_index_path %>"   ><div class="yp-header-next-btn-icon"><%= image_tag "yp-list-header-setting-icon.png", width: "23", height: "23" %></div></a>
+<!--      <a href="<%= search_index_path %>"><div class="yp-header-next-btn-icon"><%= image_tag "yp-list-header-setting-icon.png", width: "23", height: "23" %></div></a> -->
+        <%= form_tag('/search/list', method: "get", class: "setting-button") do %>
+            <%= hidden_field_tag "distance", "50" %>
+            <%= hidden_field_tag "current_position" %>
+            <%= hidden_field_tag "job_role_id", "-1" %>
+            <%= hidden_field_tag "hourly_rate", "5.13" %>
+            <%= hidden_field_tag "shift_id", "-1" %>
+            <%= hidden_field_tag "job_type", "-1" %>
+            <%= hidden_field_tag "contract_type", "-1" %>
+            <%= image_submit_tag("yp-list-header-setting-icon.png", width: "23", height: "23") %>
+        <% end %>
     </div>
     <div class="clearBoth"></div>
 </div>
