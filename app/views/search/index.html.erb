@@ -17,7 +17,7 @@
 <div class="clearBoth"></div>
 </div>
 <div class="yp-search-setting-input">
-<%= text_field_tag 'location', "#{params[:location]}", id: "autocomplete_address" %>
+<%= text_field_tag 'location', "#{params[:location]}", id: "autocomplete_address", style: 'width: 100%' %>
 <%= hidden_field_tag "current_position" %>
 <div class="yp-search-setting-label">
 <div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right "><%= params[:distance] %> Miles</div>
@@ -216,7 +216,7 @@
 
 </div>
 <br>
-<%= submit_tag "Search Jobs", class: 'yp-search-setting-btn' %>
+<div class="btn-search"><%= submit_tag "Search Jobs", class: 'yp-search-setting-btn' %></div>
 <!-- <a href="<%= list_search_index_path %>"><div class="yp-search-setting-btn">Search Jobs</div></a> -->
 </div>
 <br><br>

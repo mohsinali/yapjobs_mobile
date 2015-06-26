@@ -11,7 +11,7 @@ background:url(home-bg-page-1.jpg);
 }
 .yp-home-download-app-store { border:solid 2px #FFF; border-radius:4px; width:245px; margin:0 auto;
 position:absolute; top:5%; left:0; right:0; color:#FFF; padding:10px 20px 10px 42px;
- background:url(../images/yp-home-download-app-store-icon.png) no-repeat 10px 5px;}
+ background:url(yp-home-download-app-store-icon.png) no-repeat 10px 5px;}
  .yp-home-download-app-store:hover { background-color:#81c200}
  .yp-home-download-app-store a{ color:#FFF;}
 .yp-home-download-app-store span { font-weight:bold}
