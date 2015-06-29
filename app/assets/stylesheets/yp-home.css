@@ -17,7 +17,7 @@ position:absolute; top:5%; left:0; right:0; color:#FFF; padding:10px 20px 10px 4
 .yp-home-download-app-store span { font-weight:bold}
 .yp-home-fullsite-link {position:absolute; bottom:3%; margin:0 auto;left:0; right:0; width:120px; }
 .yp-home-fullsite-link a {color:#FFF; }
-.yp-home-view-job {border-radius:4px; width:238px; margin:0 auto;
+.yp-home-view-job {border-radius:8px; width:238px; margin:0 auto;
 position:absolute; bottom:10%; left:0; right:0; color:#FFF; padding:10px 20px 10px 20px; background-color:#81c200; font-size:24px; text-align:center}
 .yp-home-view-job a { color:#FFF;}
 .yp-home-view-job a:hover { color:#81c200;}

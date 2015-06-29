@@ -16,3 +16,11 @@ $ ->
 
 	    $('#job_role_dropdown').dropdown 'toggle'
 	    false
+
+	$("#distance").change ->
+		$("#distance_value").html($(this).val())
+		return
+
+	$("#hourly_rate").change ->
+		$("#hourly_rate_value").html($(this).val())
+		return

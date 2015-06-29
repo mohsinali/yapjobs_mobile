@@ -50,7 +50,7 @@ text-decoration: none;
 a:hover {
 color: #333333;
 text-decoration: none;
-background: #fff;
+/*background: #fff;*/
 }
 
 /* Ref: http://stackoverflow.com/questions/18838964/add-bootstrap-glyphicon-to-input-box; */
