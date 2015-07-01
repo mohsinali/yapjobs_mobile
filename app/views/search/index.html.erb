@@ -20,7 +20,7 @@
 <%= text_field_tag 'location', "#{params[:location]}", id: "autocomplete_address", style: 'width: 100%' %>
 <%= hidden_field_tag "current_position" %>
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right"><div id='distance_value'><%= params[:distance] %></div>&nbsp;Miles</div>
+<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right"><div id='distance_value' class="miles-value"><%= params[:distance] %></div><div class="miles-within">&nbsp;Miles</div></div>
 <div class="clearBoth"></div>
 </div>
 <%= range_field_tag(:distance, value = params[:distance].present? ? params[:distance] : 50, options = {:min => 0, :max => 100, :step => 10, :class => "yp-search-setting-slider"}) %>
@@ -78,7 +78,7 @@
 
 
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Hourly Rate</div><div class="yp-search-setting-label-right-rate">₤ <div id='hourly_rate_value'><%= params[:hourly_rate] %></div></div>
+<div class="yp-search-setting-label-left" >Hourly Rate</div><div class="yp-search-setting-label-right-rate"><div class="currency-rate">₤&nbsp;</div> <div id='hourly_rate_value'><%= params[:hourly_rate] %></div></div>
 <div class="clearBoth"></div>
 </div>
 <%= range_field_tag(:hourly_rate, value = params[:hourly_rate], options = {:min => 5.13, :max => 40, :step => 0.01, :class => "yp-search-setting-slider"}) %>
