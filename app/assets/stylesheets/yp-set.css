@@ -58,7 +58,7 @@ color: #555;
 	#autocomplete_address{width: 100%;}
 
 
-.yp-search-setting-btn {border-radius:4px; width:300px; margin:0 auto; color:#FFF; padding:8px 18px; background-color:#81c200 !important; font-size:16px; text-align:center}
+.yp-search-setting-btn {border-radius:4px; width:150px; margin:0 auto; color:#FFF; padding:8px 18px; background-color:#81c200 !important; font-size:16px; text-align:center}
 .yp-search-setting-btn a { color:#FFF;}
 .yp-search-setting-btn a:hover { color:#3b3a3a;}
 .yp-search-setting-btn:hover {color:#3b3a3a ; background-color:#f5f5f5; border:solid 2px #81c200}
