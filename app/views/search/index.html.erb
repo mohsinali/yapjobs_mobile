@@ -13,14 +13,17 @@
 <%= form_tag('/search/list', method: "get") do %>
 <div class="yp-search-setting-section">
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Location</div><div class="yp-search-setting-label-right "></div>
+<div class="yp-search-setting-label-left" >Location</div>
+<div class="yp-search-setting-label-right "></div>
 <div class="clearBoth"></div>
 </div>
 <div class="yp-search-setting-input">
 <%= text_field_tag 'location', "#{params[:location]}", id: "autocomplete_address", style: 'width: 100%' %>
 <%= hidden_field_tag "current_position" %>
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right"><div id='distance_value' class="miles-value"><%= params[:distance] %></div><div class="miles-within">&nbsp;Miles</div></div>
+<div class="yp-search-setting-label-left" >Distance Within</div>
+<div class="yp-search-setting-label-right">
+  <div id='distance_value' class="miles-value"><%= params[:distance] %></div><div class="miles-within">&nbsp;Miles</div></div>
 <div class="clearBoth"></div>
 </div>
 <%= range_field_tag(:distance, value = params[:distance].present? ? params[:distance] : 50, options = {:min => 0, :max => 100, :step => 10, :class => "yp-search-setting-slider"}) %>
@@ -45,9 +48,9 @@
 
     <ul class="dropdown-menu job-role-position-search-dropdown-menu">
       <li><a id="-1" class="job_role_search no-icon-list" href="#" >All</a></li>
-      <%- @job_roles["job_roles"].each do |job_role| %>
-             <li> <a id="<%= "#{job_role["id"]}" %>" class="job_role_search <%= "#{job_role["slug"]}" %>" name="<%= "#{job_role["slug"]}" %>" href="#"><%= "#{job_role["name"]}" %></a></li>
-      <%- end %> 
+      <- @job_roles["job_roles"].each do |job_role| %>
+             <li> <a id="<= "#{job_role["id"]}" %>" class="job_role_search <= "#{job_role["slug"]}" %>" name="<= "#{job_role["slug"]}" %>" href="#"><= "#{job_role["name"]}" %></a></li>
+      <- end %> 
     </ul>
 </div>
 -->
@@ -71,14 +74,16 @@
 <!-- <div class="yp-set-dropdown-btn-group">
 
  <button type="button" class="yp-set-dropdown-btn" >
-    <span class="yp-set-dropdown-btn-icon"><%= image_tag "yp-drop-down-icon-1.png" %></span>Receptionist 
+    <span class="yp-set-dropdown-btn-icon"><= image_tag "yp-drop-down-icon-1.png" %></span>Receptionist 
   </button> 
 
 </div> -->
 
 
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Hourly Rate</div><div class="yp-search-setting-label-right-rate"><div class="currency-rate">₤&nbsp;</div> <div id='hourly_rate_value'><%= params[:hourly_rate] %></div></div>
+<div class="yp-search-setting-label-left" >Hourly Rate</div>
+<div class="yp-search-setting-label-right-rate">
+  <div class="currency-rate">₤&nbsp;</div> <div id='hourly_rate_value'><%= params[:hourly_rate] %></div></div>
 <div class="clearBoth"></div>
 </div>
 <%= range_field_tag(:hourly_rate, value = params[:hourly_rate], options = {:min => 5.13, :max => 40, :step => 0.01, :class => "yp-search-setting-slider"}) %>
@@ -153,8 +158,9 @@
   <div class="clearBoth"></div> -->
 
   <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Job Type</div><div class="yp-search-setting-label-right"></div>
-<div class="clearBoth"></div>
+    <div class="yp-search-setting-label-left" >Job Type</div>
+    <div class="yp-search-setting-label-right"></div>
+    <div class="clearBoth"></div>
 </div>
 <div class="btn-group" data-toggle="buttons" style="display:block;margin-bottom:20px;">
   <label class="btn btn-primary <%= 'active' if params[:job_type] == "-1" %>" style="width:33%">
@@ -221,16 +227,7 @@
 </div>
 <br><br>
 
-  <script>
-    $(function() {
-      $( "#slider1" ).slider();
-      $( "#slider2" ).slider();
-     //  $( "#slider1" ).slider({slide: showValue, change: showValue});
-  	  // $( "#slider2" ).slider({slide: showValue, change: showValue});
-      // $( "#slider1" ).bxSlider();
-      // $( "#slider2" ).bxSlider();
-    });
-  </script>
+
 
 <% end %>
 
@@ -280,10 +277,10 @@
 <div class="clearBoth"></div>
 </div>
 
-<!-- Single button -->
+ Single button -->
 <!-- <div class="yp-set-dropdown-btn-group">
   <button type="button" class="yp-set-dropdown-btn" >
-    <span class="yp-set-dropdown-btn-icon"><%= image_tag "yp-drop-down-icon-1.png" %></span>Receptionist 
+    <span class="yp-set-dropdown-btn-icon"><= image_tag "yp-drop-down-icon-1.png" ></span>Receptionist 
   </button>
   
 </div>

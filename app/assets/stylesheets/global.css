@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utf-8"; 
 /* CSS Document */
 .header-bg { background-color: #fff;border-bottom: 1px solid #e5e5e5;border-radius: 0;border-top: 4px solid #87c50d; }
 .inner-navbar-inverse{ background-color:rgba(255, 255, 255, 0.5); border-top:4px solid #87c50d;}
@@ -754,6 +754,34 @@ div#dash-pageheading{
 
 .WAITER_WAITRESS, .WAITER_WAITRESS:hover {
   background:url(WAITER_WAITRESS_thumb.png) no-repeat;
+  height: 32px !important;
+  /*width: 32px !important;*/
+  padding:9px 31px !important;  
+}
+
+.BARISTA, .BARISTA:hover {
+  background:url(BARISTA_thumb.png) no-repeat;
+  height: 32px !important;
+  /*width: 32px !important;*/
+  padding:9px 31px !important;  
+}
+
+.CUSTOMER_SERVICE, .CUSTOMER_SERVICE:hover {
+  background:url(CUSTOMER_SERVICE_thumb.png) no-repeat;
+  height: 32px !important;
+  /*width: 32px !important;*/
+  padding:9px 31px !important;  
+}
+
+.SHIFT_SUPERVISOR, .SHIFT_SUPERVISOR:hover {
+  background:url(SHIFT_SUPERVISOR_thumb.png) no-repeat;
+  height: 32px !important;
+  /*width: 32px !important;*/
+  padding:9px 31px !important;  
+}
+
+.OTHER, .OTHER:hover {
+  background:url(OTHER_thumb.png) no-repeat;
   height: 32px !important;
   /*width: 32px !important;*/
   padding:9px 31px !important;  
