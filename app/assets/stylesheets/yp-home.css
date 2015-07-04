@@ -45,6 +45,7 @@ padding:10px 20px 10px 20px; background-color:#81c200; font-size:24px; text-alig
 	/*bottom: 116px;*/
     margin: 0 38%;
     /*position: absolute;*/
+    display: none;
 	}
 	
 	}
@@ -135,6 +136,7 @@ text-align: center
     	/*bottom: 168px;*/
     	margin: 0 45%;
     	/*position: absolute;*/
+    	display: none;
 		}
 	}
 
@@ -186,6 +188,7 @@ text-align: center
 	/*bottom: 95px;*/
     margin: 0 38%;
     /*position: absolute;*/
+    display: none;
 	}
 
 	}
@@ -195,3 +198,9 @@ text-align: center
 	}
 
 
+.bullets{     
+	/*bottom: 95px;*/
+    margin: 0 38%;
+    /*position: absolute;*/
+    display: none;
+	}

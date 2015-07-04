@@ -231,7 +231,7 @@
 
 <% end %>
 
-
+<a name="search_results">
 <%- unless @jobs["jobs"].nil? %>
   <%- @jobs["jobs"].each do |job| %>
       <a href="<%= job_path(job["id"]) %>">
@@ -257,23 +257,23 @@
       </a>
   <% end %>
 <% end %>
-
+</a>
 
 <!--
   <div class="yp-search-setting-section">
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Location</div><div class="yp-search-setting-label-right "></div>
+<div class="yp-search-setting-label-left">Location</div><div class="yp-search-setting-label-right "></div>
 <div class="clearBoth"></div>
 </div>
 <div class="yp-search-setting-input"><input name="" type="text" value="Enter Location"></div>
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Distance Within</div><div class="yp-search-setting-label-right ">20 Miles</div>
+<div class="yp-search-setting-label-left">Distance Within</div><div class="yp-search-setting-label-right">20 Miles</div>
 <div class="clearBoth"></div>
 </div>
-<div id="slider1"  class="yp-search-setting-slider" ></div>
+<div id="slider1" class="yp-search-setting-slider"></div>
 
 <div class="yp-search-setting-label">
-<div class="yp-search-setting-label-left" >Position</div>
+<div class="yp-search-setting-label-left">Position</div>
 <div class="clearBoth"></div>
 </div>
 
@@ -347,17 +347,4 @@
 <br>
 <a href="<%= list_search_index_path %>"><div class="yp-search-setting-btn">Search Jobs</div></a>
 </div>
-<br><br>
-
-  <script>
-    $(function() {
-      $( "#slider1" ).slider();
-      $( "#slider2" ).slider();
-     //  $( "#slider1" ).slider({slide: showValue, change: showValue});
-      // $( "#slider2" ).slider({slide: showValue, change: showValue});
-      // $( "#slider1" ).bxSlider();
-      // $( "#slider2" ).bxSlider();
-    });
-  </script>
-
--->
+<br><br>-->

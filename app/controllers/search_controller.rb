@@ -14,7 +14,7 @@ class SearchController < ApplicationController
 
 	 #  @job_roles = Hash.from_xml(job_roles_get)
 
-	  redirect_to :controller => 'search', :action => 'index', :location => params[:location], 
+	  redirect_to :controller => 'search', :action => 'index', :anchor => 'search_results', :location => params[:location], 
 	  	:current_position => params[:current_position], :distance => params[:distance], :job_role_id => params[:job_role_id], 
       :hourly_rate => params[:hourly_rate], :contract_type => params[:contract_type], :job_type => params[:job_type], 
       :shift_id => params[:shift_id]
