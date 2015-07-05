@@ -26,8 +26,8 @@
         <a href="<%= job_path(job["id"]) %>">
         <div class="yp-list">
             <div class="yp-list-left">
-                <div class="yp-list-left-icon">        
-                <%= image_tag "http://www.yapjobs.com/" + job["role"]["image"], width: "26", height: "27" %>
+                <div class="yp-list-left-icon">      
+                <%= image_tag ENV["BASE_SERVER"] + job["role"]["image"], width: "26", height: "27" %>
 
                 </div>
           </div>

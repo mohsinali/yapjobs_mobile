@@ -34,6 +34,10 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  config.api_base_server_url = ENV["BASE_SERVER"]
+  config.api_server_url = ENV["API_PATH"]
+  config.api_authorization = ENV["API_AUTHORIZATION"]
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

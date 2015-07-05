@@ -40,7 +40,7 @@
 <!-- <div class="dropdown">
 <div id="job_role_dropdown" data-toggle="dropdown" class="job-role-search-position dropdown-toggle" aria-expanded="false">
                             <div class="job-role-lable search-job-role-lable-selected no-icon-list-selected">
-                              All
+                              AllRails.application.api_base_server_url
                             </div>
                             <div class="job-role-lable-arrow caret"></div>
                             <div class="clearfix"></div>
@@ -238,7 +238,7 @@
       <div class="yp-list">
           <div class="yp-list-left">
               <div class="yp-list-left-icon">        
-              <%= image_tag "http://www.yapjobs.com/" + job["role"]["image"], width: "26", height: "27" %>
+              <%= image_tag ENV["BASE_SERVER"] + job["role"]["image"], width: "26", height: "27" %>
 
               </div>
         </div>
