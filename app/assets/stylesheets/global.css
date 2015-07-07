@@ -780,6 +780,13 @@ div#dash-pageheading{
   padding:9px 31px !important;  
 }
 
+.OTHER, .OTHER:hover {
+  background:url(OTHER_thumb.png) no-repeat;
+  height: 32px !important;
+  /*width: 32px !important;*/
+  padding:9px 31px !important;  
+}
+
 .margin-signup-button, .social_media_signup{
   font-weight:600;
 }
