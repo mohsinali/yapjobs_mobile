@@ -32,7 +32,7 @@
                 </div>
           </div>
             <div class="yp-list-content">
-                <div class="yp-list-content-job-title"><%= job["role"]["name"] %></div>
+                <div class="yp-list-content-job-title"><%= job["role"]["slug"] != "OTHER" ? job["role"]["name"] : job["other_job_role"] %></div>
                     <div class="yp-list-content-address"><%= job["business"]["address"] %></div>
                         <div class="yp-list-content-footer">
                         <!-- <div class="yp-list-content-footer-distance"><%= job["distance"] %> miles away</div> -->
