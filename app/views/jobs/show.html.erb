@@ -47,7 +47,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div class="yp-job-title"><%= @job["job_role"]["slug"] != "OTHER" ? @job["job_role"]["name"] : @job["other_job_role"] %></div>
 <div class="yp-job-details">
 Start: <%= @job["start_date"].strftime('%b %d, %Y') %><br>
-Role: <%= (@job["job_role"]["job_type"] == 'true') ? 'Part Time' : 'Full Time' %><br>
+Role: <%= (@job["job_type"] == true) ? 'Part Time' : 'Full Time' %><br>
 Shift: <%= 'Day' if @job["shift_id"] == 1 %><%= 'Evening' if @job["shift_id"] == 2 %><%= 'Night' if @job["shift_id"] == 3 %><br>
 Hourly Rate: £ <%= @job["hourly_rate"].to_f.round(2) %>/Hour<br>
 Contract Type: <%= (@job["contract_type"] == true) ? 'Permanent' : 'Temporary' %><br>
